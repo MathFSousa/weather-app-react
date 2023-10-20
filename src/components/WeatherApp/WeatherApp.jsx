@@ -1,6 +1,6 @@
 import "./WeatherApp.css";
+import Search from "./Search";
 
-import search_icon from "../assets/search.png";
 import clear_icon from "../assets/clear.png";
 import cloud_icon from "../assets/cloud.png";
 import drizzle_icon from "../assets/drizzle.png";
@@ -66,12 +66,7 @@ const WeatherApp = () => {
 
   return (
     <div className="container">
-      <div className="top-bar">
-        <input type="text" className="cityInput" placeholder="Search" />
-        <div className="search-icon" onClick={() => search()}>
-          <img src={search_icon} alt="" />
-        </div>
-      </div>
+      <Search onSearch={search} />
       <div className="weather-image">
         <img src={wicon} alt="" />
       </div>
